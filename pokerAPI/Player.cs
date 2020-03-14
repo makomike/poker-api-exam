@@ -24,7 +24,7 @@ namespace pokerAPI
         }
 
         public List<Card> playerCard { get { return hand; } }
-
+        public string playerName { get { return _name;}}
      
         public void pickCard() {
 
