@@ -1,0 +1,9 @@
+D:\Projects\poker-api-exam\pokerGame\bin\Debug\pokerGame.exe.config
+D:\Projects\poker-api-exam\pokerGame\bin\Debug\pokerGame.exe
+D:\Projects\poker-api-exam\pokerGame\bin\Debug\pokerGame.pdb
+D:\Projects\poker-api-exam\pokerGame\obj\Debug\pokerGame.csprojAssemblyReference.cache
+D:\Projects\poker-api-exam\pokerGame\obj\Debug\pokerGame.exe
+D:\Projects\poker-api-exam\pokerGame\obj\Debug\pokerGame.pdb
+D:\Projects\poker-api-exam\pokerGame\bin\Debug\pokerAPI.dll
+D:\Projects\poker-api-exam\pokerGame\bin\Debug\pokerAPI.pdb
+D:\Projects\poker-api-exam\pokerGame\obj\Debug\pokerGame.csproj.CopyComplete

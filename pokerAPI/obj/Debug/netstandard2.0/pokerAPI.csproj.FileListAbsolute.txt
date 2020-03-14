@@ -1,0 +1,8 @@
+D:\Projects\poker-api-exam\pokerAPI\bin\Debug\netstandard2.0\pokerAPI.deps.json
+D:\Projects\poker-api-exam\pokerAPI\bin\Debug\netstandard2.0\pokerAPI.dll
+D:\Projects\poker-api-exam\pokerAPI\bin\Debug\netstandard2.0\pokerAPI.pdb
+D:\Projects\poker-api-exam\pokerAPI\obj\Debug\netstandard2.0\pokerAPI.csprojAssemblyReference.cache
+D:\Projects\poker-api-exam\pokerAPI\obj\Debug\netstandard2.0\pokerAPI.AssemblyInfoInputs.cache
+D:\Projects\poker-api-exam\pokerAPI\obj\Debug\netstandard2.0\pokerAPI.AssemblyInfo.cs
+D:\Projects\poker-api-exam\pokerAPI\obj\Debug\netstandard2.0\pokerAPI.dll
+D:\Projects\poker-api-exam\pokerAPI\obj\Debug\netstandard2.0\pokerAPI.pdb
