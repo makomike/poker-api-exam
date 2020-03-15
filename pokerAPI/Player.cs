@@ -17,14 +17,14 @@ namespace pokerAPI
             _name = name;
             pickCard();
             sortCards();
-            printCards();
+            //printCards();
 
 
 
         }
 
         public List<Card> playerCard { get { return hand; } }
-        public string playerName { get { return _name;}}
+        public string playerName { get { return _name; } }
      
         public void pickCard() {
 
@@ -37,6 +37,7 @@ namespace pokerAPI
             string x_card;
 
             for (int i = 0; i < 5; i++) {
+                Console.Write("Card {0}: ",i+1);
                 x_card = Console.ReadLine();
               
                 if (x_card.Length == 3)
@@ -73,7 +74,6 @@ namespace pokerAPI
 
         }
 
-
         //Sorting the cards
         public void sortCards() {
             Console.WriteLine("--------------");
@@ -87,7 +87,6 @@ namespace pokerAPI
         }
 
         //Print Cards
-
         public void printCards() {
             foreach (Card cards in hand) {
                 if (cards._rank == 11)

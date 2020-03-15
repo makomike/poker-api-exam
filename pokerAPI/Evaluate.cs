@@ -18,33 +18,41 @@ namespace pokerAPI
         public Evaluate(Player p) {
             player = p;
             getSuitCount();
+
+            
             FourOfAKind();
             FullHouse();
             Straight();
             Flush();
+            Pairs();
         }
 
         public void getSuitCount() {
             for (int i = 0; i < 5; i++) {
-                if (player.playerCard[i]._suit == "D")
-                {
-                    diamond++;
+
+                switch (player.playerCard[i]._suit){
+
+                    case "D":
+                        diamond++;
+                        break;
+                    case "S":
+                        spade++;
+                        break;
+                    case "H":
+                        heart++;
+                        break;
+                    case "C":
+                        clover++;
+                        break;
+
+
                 }
-                else if (player.playerCard[i]._suit == "S")
-                {
-                    spade++;
-                }
-                else if (player.playerCard[i]._suit == "H")
-                {
-                    heart++;
-                }
-                else {
-                    clover++;
-                }
+
+
             }
         }
 
-        //Four Of A Kind
+        //Four Of A Kind(if card 1 value is equals to the value of card 2,3,4 or card 2 value is equals to the value of 3,4,5)
         public bool FourOfAKind() {
 
             if (player.playerCard[0]._rank == player.playerCard[1]._rank && player.playerCard[1]._rank == player.playerCard[2]._rank
@@ -80,9 +88,9 @@ namespace pokerAPI
                 return false;
             }
         }
-
-
-        //Full House
+        
+        //Full House(if card 1 is equals to the value of card 2 and 3 and  card 4 is equals to the value of 5 
+        //OR card 1 is equals to the value card 2 and card 3 is equals to the value of card 4 and 5)
         public bool FullHouse() {
 
             if ((player.playerCard[0]._rank == player.playerCard[1]._rank &&
@@ -112,7 +120,6 @@ namespace pokerAPI
            
 
         }
-
 
         //Stringht
         public bool Straight() {
@@ -172,6 +179,27 @@ namespace pokerAPI
         }
 
 
+        //Pairs
+        public bool Pairs() {
+            
+            int pairCount = 0;
+
+            if (player.playerCard[0]._rank == player.playerCard[1]._rank && player.playerCard[2]._rank == player.playerCard[3]._rank)
+            {
+                hightcard = player.playerCard[4]._rank;
+            }
+            else if (player.playerCard[0]._rank == player.playerCard[1]._rank && player.playerCard[3]._rank == player.playerCard[4]._rank)
+            {
+                hightcard = player.playerCard[2]._rank;
+            }
+            else if (player.playerCard[1]._rank == player.playerCard[2]._rank && player.playerCard[3]._rank == player.playerCard[4]._rank) {
+                hightcard = player.playerCard[0]._rank;
+            }
+
+
+            return true;
+
+        }
 
     }
 }

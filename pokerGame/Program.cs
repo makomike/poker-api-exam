@@ -11,9 +11,11 @@ namespace pokerGame
     {
         static void Main(string[] args)
         {
-            Player mike = new Player("Mako");
-            Evaluate evaluate = new Evaluate(mike);
+            //Player mike = new Player("Mako");
+            //Evaluate evaluate = new Evaluate(mike);
 
+
+            new Game();
 
             Console.ReadLine();
         }
