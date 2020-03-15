@@ -13,7 +13,7 @@ namespace pokerAPI
         void EvaluateCard(List<Player> _player);
 
 
-
+        void ShowWinner();
 
     }   
 }

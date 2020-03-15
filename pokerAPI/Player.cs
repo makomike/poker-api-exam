@@ -11,6 +11,7 @@ namespace pokerAPI
         List<Card> temp_hand; //Used for sorting of cards
 
         string _name;
+  
 
         public Player(string name) {
             hand = new  List<Card>();
@@ -24,7 +25,7 @@ namespace pokerAPI
         }
 
         public List<Card> playerCard { get { return hand; } }
-        public string playerName { get { return _name; } }
+        public string playerName { get { return _name; } } 
      
         public void pickCard() {
 
@@ -42,7 +43,7 @@ namespace pokerAPI
               
                 if (x_card.Length == 3)
                 {
-                    p_suit = x_card.Substring(2, 1);
+                    p_suit = x_card.Substring(2, 1).ToUpper();
                     p_rank = 10;
                     hand.Add(new Card { _rank = p_rank, _suit = p_suit });
                 }
