@@ -263,7 +263,7 @@ namespace pokerAPI
                  );
 
 
-                handvalue.total = player.playerCard[0]._rank + player.playerCard[1]._rank + player.playerCard[2]._rank + player.playerCard[3]._rank + player.playerCard[4]._rank;
+                 handvalue.total = player.playerCard[0]._rank + player.playerCard[1]._rank + player.playerCard[2]._rank + player.playerCard[3]._rank + player.playerCard[4]._rank;
                 return 6;
             }
             else {

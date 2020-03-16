@@ -90,13 +90,12 @@ namespace pokerAPI
         public void ShowWinner()
         {
 
-            //List<ScoreSheet> winners = new List<ScoreSheet>();
+            List<ScoreSheet> winners = new List<ScoreSheet>();
 
 
        
-            string[] winners = new string[playerCount];
             int res=0;
-            int playerWin = 0;
+            string[] winnersname = new string[playerCount] ;
 
            
             if (score.Count == 1) {
@@ -106,40 +105,51 @@ namespace pokerAPI
 
             for (int i = 0;i < score.Count;i++)
             {
-                res = score[0].handRank;
-                if (score[0].handRank > score[i+1].handRank)
-                {
-                    //if no other rank is higher
-                    Console.WriteLine("The Winner is: {0}", score[i].playername);
-                    return;
+                if (score[0].handRank >= score[i].handRank) {
+                    winners.Add(new ScoreSheet { handRank = score[i].handRank, playername = score[i].playername, highCard = score[i].highCard, total = score[i].total });
                 }
-                else if (res == score[i].handRank) {
-
-
-                  
-
-                    if (score[i].highCard > score[i].highCard) {
-                        winners[i] = score[0].playername;
-                        return;
-                    }
-                    else if(score[i].highCard == score[i].highCard)
-                    {
-                     
-                        winners[i] = score[i].playername;
-                      
-                    }
-                    else
-                    {
-                        return;
-
-                    }
-                    
-                }
-                    
             }
 
-            Console.WriteLine("The Winner is: {0}", winners);
+            List<ScoreSheet> temp_score = new List<ScoreSheet>();
+            temp_score = winners;
+            IEnumerable<ScoreSheet> temp = temp_score.OrderByDescending(x => x.total);
+            winners = new List<ScoreSheet>();
+            winners.Clear();
+            foreach (ScoreSheet scoreSheet in temp)
+            {
+                winners.Add(new ScoreSheet
+                {
+                    playername = scoreSheet.playername,
+                    total = scoreSheet.total,
+                    highCard = scoreSheet.highCard,
+                    handRank = scoreSheet.handRank
+                }
+               );
 
+            }
+
+            for (int i = 0; i < winners.Count; i++)
+            {
+                if (winners[0].total > winners[i].total)
+                {
+                    break;
+                }
+                else if(winners[0].total == winners[i].total) {
+                    winnersname[i] = winners[i].playername;
+                }
+            }
+
+
+
+            string _winners="";
+
+
+            for (int i = 0; i < winnersname.Count(); i++) {
+                _winners += " " + winnersname[i];
+            }
+
+            Console.WriteLine("The winners are: {0}", _winners);
+            
         }
 
       
