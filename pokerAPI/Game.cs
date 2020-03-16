@@ -70,17 +70,19 @@ namespace pokerAPI
             //sorting
             List<ScoreSheet> temp_score = new List<ScoreSheet>();
             temp_score = score;
-            IEnumerable<ScoreSheet> temp = temp_score.OrderBy(x => x.handRank);
+            IEnumerable<ScoreSheet> temp = temp_score.OrderByDescending(x => x.handRank);
             score = new List<ScoreSheet>();
-            foreach (ScoreSheet c in temp)
+            score.Clear();
+            foreach(ScoreSheet scoreSheet in temp)
             {
-                score.Add(new ScoreSheet
-                {
-                    playername = evaluate.handvalues.playername,
-                    total = evaluate.handvalues.total,
-                    highCard = evaluate.handvalues.highcard,
-                    handRank = evaluate.handvalues.handrank
-                }); ;
+             score.Add(new ScoreSheet {
+                    playername = scoreSheet.playername,
+                    total = scoreSheet.total,
+                    highCard = scoreSheet.highCard,
+                    handRank = scoreSheet.handRank
+                    }
+            );
+                 
             }
 
         }
@@ -88,17 +90,55 @@ namespace pokerAPI
         public void ShowWinner()
         {
 
-          
+            //List<ScoreSheet> winners = new List<ScoreSheet>();
 
-            int temp_total = 0;
-            int temp_hightcard = 0;
 
-            for (int i = 0;i < playerCount;i++)
+       
+            string[] winners = new string[playerCount];
+            int res=0;
+            int playerWin = 0;
+
+           
+            if (score.Count == 1) {
+                Console.WriteLine("The Winner is: {0}", score[0].playername);
+                return;
+            }
+
+            for (int i = 0;i < score.Count;i++)
             {
-               
+                res = score[0].handRank;
+                if (score[0].handRank > score[i+1].handRank)
+                {
+                    //if no other rank is higher
+                    Console.WriteLine("The Winner is: {0}", score[i].playername);
+                    return;
+                }
+                else if (res == score[i].handRank) {
 
+
+                  
+
+                    if (score[i].highCard > score[i].highCard) {
+                        winners[i] = score[0].playername;
+                        return;
+                    }
+                    else if(score[i].highCard == score[i].highCard)
+                    {
+                     
+                        winners[i] = score[i].playername;
+                      
+                    }
+                    else
+                    {
+                        return;
+
+                    }
+                    
+                }
                     
             }
+
+            Console.WriteLine("The Winner is: {0}", winners);
 
         }
 

@@ -111,7 +111,7 @@ namespace pokerAPI
 
                 handvalue.total = player.playerCard[1]._rank * 4;
                 handvalue.highcard = player.playerCard[0]._rank;
-                return 8;
+                return 7;
 
             }
             else {
@@ -221,7 +221,7 @@ namespace pokerAPI
 
                 }
                 else {
-                    return 5;
+                    return 0;
                 }
 
             }
@@ -236,6 +236,9 @@ namespace pokerAPI
                    player.playerCard[3]._rank + player.playerCard[3]._suit,
                    player.playerCard[4]._rank + player.playerCard[4]._suit
                    );
+
+
+                handvalue.total = player.playerCard[0]._rank + player.playerCard[1]._rank + player.playerCard[2]._rank + player.playerCard[3]._rank + player.playerCard[4]._rank;
 
                 return 5;
             }
@@ -258,6 +261,9 @@ namespace pokerAPI
                  player.playerCard[3]._rank + player.playerCard[3]._suit,
                  player.playerCard[4]._rank + player.playerCard[4]._suit
                  );
+
+
+                handvalue.total = player.playerCard[0]._rank + player.playerCard[1]._rank + player.playerCard[2]._rank + player.playerCard[3]._rank + player.playerCard[4]._rank;
                 return 6;
             }
             else {

@@ -66,6 +66,7 @@ namespace pokerAPI
                         p_rank = 13;
                     }
                     else {
+                        
                         p_rank = Convert.ToInt32(x_card.Substring(0, 1));
                     }
                     hand.Add(new Card { _rank = p_rank, _suit = p_suit });
