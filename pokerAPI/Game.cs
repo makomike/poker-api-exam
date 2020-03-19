@@ -9,8 +9,6 @@ namespace pokerAPI
     {
 
 
-
-
         List<Player> players;
         List<ScoreSheet> score = new List<ScoreSheet>();
         Evaluate evaluate;
@@ -145,10 +143,17 @@ namespace pokerAPI
 
 
             for (int i = 0; i < winnersname.Count(); i++) {
-                _winners += " " + winnersname[i];
+                _winners += " [" + winnersname[i] + "]";
             }
 
-            Console.WriteLine("The winners are: {0}", _winners);
+            if (winnersname.Count() > 1)
+            {
+                Console.WriteLine("The winners are: {0}", _winners);
+            }
+            else {
+                Console.WriteLine("The winner is: {0}", _winners);
+            }
+           
             
         }
 

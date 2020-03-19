@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pokerAPI", "pokerAPI.csproj", "{973C2B06-C6E4-4944-9B1A-4CEABD83A67D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pokerAPI", "pokerAPI.csproj", "{973C2B06-C6E4-4944-9B1A-4CEABD83A67D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pokerGame", "..\pokerGame\pokerGame.csproj", "{611195AD-E4A0-456B-9955-0FC6A3EA4DCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testPokerAPI", "..\testPokerAPI\testPokerAPI.csproj", "{833535DB-70AD-4FCC-AB97-366B2C6AA88E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{611195AD-E4A0-456B-9955-0FC6A3EA4DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{611195AD-E4A0-456B-9955-0FC6A3EA4DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{611195AD-E4A0-456B-9955-0FC6A3EA4DCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{833535DB-70AD-4FCC-AB97-366B2C6AA88E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{833535DB-70AD-4FCC-AB97-366B2C6AA88E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{833535DB-70AD-4FCC-AB97-366B2C6AA88E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{833535DB-70AD-4FCC-AB97-366B2C6AA88E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
