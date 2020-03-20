@@ -4,14 +4,33 @@ using System.Text;
 using System.Linq;
 namespace pokerAPI
 {
+
+    public class MockPlayer{
+        public List<Card>  hand;
+        List<Card> temp_hand; //Used for sorting of cards
+        string _name;
+        public MockPlayer(string name = "") {
+            hand = new List<Card>();
+
+            _name = name;
+        }
+
+        public List<Card> cardHand { get { return hand; } set { hand = value; } }
+        public string playerName { get { return _name; } }
+
+
+
+    }
+
     public class Player
     {
 
-        List<Card> hand;
+        public List<Card> hand;
         List<Card> temp_hand; //Used for sorting of cards
 
         string _name;
-  
+
+       
 
         public Player(string name) {
             hand = new  List<Card>();
@@ -24,7 +43,10 @@ namespace pokerAPI
 
         }
 
-        public List<Card> playerCard { get { return hand; } }
+
+       
+
+        public List<Card> playerCard { get { return hand; } set { } }
         public string playerName { get { return _name; } } 
      
         public void pickCard() {
@@ -115,7 +137,6 @@ namespace pokerAPI
             }
         }
 
-
-
+    
     }
 }

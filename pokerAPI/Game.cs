@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace pokerAPI
 {
-    public class Game : IPokerInterface
+    public class Game
     {
 
 
@@ -29,6 +29,9 @@ namespace pokerAPI
 
                 CreatePlayer(playerName);
 
+                //CreatePlayerCard();
+                //SortPlayerCard();
+
             }
 
             EvaluateCard(players);
@@ -44,13 +47,13 @@ namespace pokerAPI
         public void CreatePlayer(string _playerName)
         {
             players.Add(new Player(_playerName));
+            
           
         }
 
-        public Card[] CreatePlayerCard(string _playerName)
-        {
-            throw new NotImplementedException();
-        }
+  
+
+
 
 
         public void EvaluateCard(List<Player> player_list)
@@ -132,9 +135,21 @@ namespace pokerAPI
                 {
                     break;
                 }
-                else if(winners[0].total == winners[i].total) {
-                    winnersname[i] = winners[i].playername;
+                else if (winners[0].total == winners[i].total)
+                {
+                    if (winners[0].highCard == winners[i].highCard)
+                    {
+                        winnersname[i] = winners[i].playername;
+                        
+                    }
+                    else if(winners[0].highCard < winners[i].highCard)
+                    {
+                        winnersname[0] = winners[i].playername;
+      
+                    }
+
                 }
+              
             }
 
 
@@ -143,7 +158,7 @@ namespace pokerAPI
 
 
             for (int i = 0; i < winnersname.Count(); i++) {
-                _winners += " [" + winnersname[i] + "]";
+                _winners += " " + winnersname[i] ;
             }
 
             if (winnersname.Count() > 1)

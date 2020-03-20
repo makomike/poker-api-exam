@@ -26,7 +26,7 @@ namespace pokerAPI
         int heart = 0;
         int clover = 0;
         int handrank = 0;
-
+        private object p;
 
         public HandValue handvalues
         {
@@ -45,9 +45,15 @@ namespace pokerAPI
            if (handvalue.handrank == 0) handvalue.handrank = Flush();
            if (handvalue.handrank == 0) handvalue.handrank = Straight();
            if (handvalue.handrank == 0) handvalue.handrank = ThreeOfAKind();
-          // if (handrank == 0) handrank = Pairs();
 
         }
+
+      
+
+
+
+
+
 
 
         //gets the suit count
@@ -86,11 +92,11 @@ namespace pokerAPI
                 && player.playerCard[2]._rank == player.playerCard[3]._rank)
             {
                 Console.WriteLine(player.playerName + ": {0} {1} {2} {3} {4} (Four Of A Kind)",
-                        player.playerCard[0]._rank + player.playerCard[0]._suit,
-                        player.playerCard[1]._rank + player.playerCard[1]._suit,
-                        player.playerCard[2]._rank + player.playerCard[2]._suit,
-                        player.playerCard[3]._rank + player.playerCard[3]._suit,
-                        player.playerCard[4]._rank + player.playerCard[4]._suit
+                          testCardRank(player.playerCard[0]._rank) + player.playerCard[0]._suit,
+                          testCardRank(player.playerCard[1]._rank) + player.playerCard[1]._suit,
+                          testCardRank(player.playerCard[2]._rank) + player.playerCard[2]._suit,
+                          testCardRank(player.playerCard[3]._rank) + player.playerCard[3]._suit,
+                          testCardRank(player.playerCard[4]._rank) + player.playerCard[4]._suit
                         );
 
                 handvalue.total = player.playerCard[0]._rank * 4;
@@ -102,11 +108,11 @@ namespace pokerAPI
                 && player.playerCard[3]._rank == player.playerCard[4]._rank) {
 
                 Console.WriteLine(player.playerName + ": {0} {1} {2} {3} {4} (Four Of A Kind)",
-                     player.playerCard[0]._rank + player.playerCard[0]._suit,
-                     player.playerCard[1]._rank + player.playerCard[1]._suit,
-                     player.playerCard[2]._rank + player.playerCard[2]._suit,
-                     player.playerCard[3]._rank + player.playerCard[3]._suit,
-                     player.playerCard[4]._rank + player.playerCard[4]._suit
+                         testCardRank(player.playerCard[0]._rank) + player.playerCard[0]._suit,
+                         testCardRank(player.playerCard[1]._rank) + player.playerCard[1]._suit,
+                         testCardRank(player.playerCard[2]._rank) + player.playerCard[2]._suit,
+                         testCardRank(player.playerCard[3]._rank) + player.playerCard[3]._suit,
+                         testCardRank(player.playerCard[4]._rank) + player.playerCard[4]._suit
                      );
 
                 handvalue.total = player.playerCard[1]._rank * 4;
@@ -125,11 +131,11 @@ namespace pokerAPI
             if (player.playerCard[0]._rank == player.playerCard[1]._rank && player.playerCard[1]._rank == player.playerCard[2]._rank && player.playerCard[2]._rank != player.playerCard[3]._rank && player.playerCard[3]._rank != player.playerCard[4]._rank )
             {
                 Console.WriteLine(player.playerName + ": {0} {1} {2} {3} {4} (Three Of A Kind)",
-                        player.playerCard[0]._rank + player.playerCard[0]._suit,
-                        player.playerCard[1]._rank + player.playerCard[1]._suit,
-                        player.playerCard[2]._rank + player.playerCard[2]._suit,
-                        player.playerCard[3]._rank + player.playerCard[3]._suit,
-                        player.playerCard[4]._rank + player.playerCard[4]._suit
+                        testCardRank(player.playerCard[0]._rank) + player.playerCard[0]._suit,
+                     testCardRank(player.playerCard[1]._rank) + player.playerCard[1]._suit,
+                     testCardRank(player.playerCard[2]._rank) + player.playerCard[2]._suit,
+                     testCardRank(player.playerCard[3]._rank) + player.playerCard[3]._suit,
+                     testCardRank(player.playerCard[4]._rank) + player.playerCard[4]._suit
                         );
 
 
@@ -143,11 +149,11 @@ namespace pokerAPI
             {
 
                 Console.WriteLine(player.playerName + ": {0} {1} {2} {3} {4} (Three Of A Kind)",
-                     player.playerCard[0]._rank + player.playerCard[0]._suit,
-                     player.playerCard[1]._rank + player.playerCard[1]._suit,
-                     player.playerCard[2]._rank + player.playerCard[2]._suit,
-                     player.playerCard[3]._rank + player.playerCard[3]._suit,
-                     player.playerCard[4]._rank + player.playerCard[4]._suit
+                      testCardRank(player.playerCard[0]._rank) + player.playerCard[0]._suit,
+                     testCardRank(player.playerCard[1]._rank) + player.playerCard[1]._suit,
+                     testCardRank(player.playerCard[2]._rank) + player.playerCard[2]._suit,
+                     testCardRank(player.playerCard[3]._rank) + player.playerCard[3]._suit,
+                     testCardRank(player.playerCard[4]._rank) + player.playerCard[4]._suit
                      );
 
                 handvalue.total = player.playerCard[0]._rank * 3;
@@ -159,11 +165,11 @@ namespace pokerAPI
             {
 
                 Console.WriteLine(player.playerName + ": {0} {1} {2} {3} {4} (Three Of A Kind)",
-                     player.playerCard[0]._rank + player.playerCard[0]._suit,
-                     player.playerCard[1]._rank + player.playerCard[1]._suit,
-                     player.playerCard[2]._rank + player.playerCard[2]._suit,
-                     player.playerCard[3]._rank + player.playerCard[3]._suit,
-                     player.playerCard[4]._rank + player.playerCard[4]._suit
+                     testCardRank(player.playerCard[0]._rank) + player.playerCard[0]._suit,
+                     testCardRank(player.playerCard[1]._rank) + player.playerCard[1]._suit,
+                     testCardRank(player.playerCard[2]._rank) + player.playerCard[2]._suit,
+                     testCardRank(player.playerCard[3]._rank) + player.playerCard[3]._suit,
+                     testCardRank(player.playerCard[4]._rank) + player.playerCard[4]._suit
                      );
 
                 handvalue.total = player.playerCard[0]._rank * 3;
@@ -193,14 +199,18 @@ namespace pokerAPI
             {
 
                 Console.WriteLine(player.playerName + ": {0} {1} {2} {3} {4} (Full House)",
-                     player.playerCard[0]._rank + player.playerCard[0]._suit,
-                     player.playerCard[1]._rank + player.playerCard[1]._suit,
-                     player.playerCard[2]._rank + player.playerCard[2]._suit,
-                     player.playerCard[3]._rank + player.playerCard[3]._suit,
-                     player.playerCard[4]._rank + player.playerCard[4]._suit
+                     testCardRank(player.playerCard[0]._rank) + player.playerCard[0]._suit,
+                     testCardRank(player.playerCard[1]._rank) + player.playerCard[1]._suit,
+                     testCardRank(player.playerCard[2]._rank) + player.playerCard[2]._suit,
+                     testCardRank(player.playerCard[3]._rank) + player.playerCard[3]._suit,
+                     testCardRank(player.playerCard[4]._rank) + player.playerCard[4]._suit
                      );
 
-                return 7;
+
+                handvalue.total = player.playerCard[0]._rank + player.playerCard[1]._rank +
+                                  player.playerCard[2]._rank + player.playerCard[3]._rank + player.playerCard[4]._rank;
+               
+                return 6;
             }
             else {
                 return 0;
@@ -230,11 +240,11 @@ namespace pokerAPI
             {
 
                 Console.WriteLine(player.playerName + ": {0} {1} {2} {3} {4} (Straight)",
-                   player.playerCard[0]._rank + player.playerCard[0]._suit,
-                   player.playerCard[1]._rank + player.playerCard[1]._suit,
-                   player.playerCard[2]._rank + player.playerCard[2]._suit,
-                   player.playerCard[3]._rank + player.playerCard[3]._suit,
-                   player.playerCard[4]._rank + player.playerCard[4]._suit
+                   testCardRank(player.playerCard[0]._rank) + player.playerCard[0]._suit,
+                   testCardRank(player.playerCard[1]._rank) + player.playerCard[1]._suit,
+                   testCardRank(player.playerCard[2]._rank) + player.playerCard[2]._suit,
+                   testCardRank(player.playerCard[3]._rank) + player.playerCard[3]._suit,
+                   testCardRank(player.playerCard[4]._rank) + player.playerCard[4]._suit
                    );
 
 
@@ -255,11 +265,11 @@ namespace pokerAPI
             if (diamond == 5 || heart == 5 || spade == 5 || clover == 5 && Straight() == 0)
             {
                 Console.WriteLine(player.playerName + ": {0} {1} {2} {3} {4} (Flush)",
-                 player.playerCard[0]._rank + player.playerCard[0]._suit,
-                 player.playerCard[1]._rank + player.playerCard[1]._suit,
-                 player.playerCard[2]._rank + player.playerCard[2]._suit,
-                 player.playerCard[3]._rank + player.playerCard[3]._suit,
-                 player.playerCard[4]._rank + player.playerCard[4]._suit
+                 testCardRank(player.playerCard[0]._rank) + player.playerCard[0]._suit,
+                 testCardRank(player.playerCard[1]._rank) + player.playerCard[1]._suit,
+                 testCardRank(player.playerCard[2]._rank) + player.playerCard[2]._suit,
+                 testCardRank(player.playerCard[3]._rank) + player.playerCard[3]._suit,
+                 testCardRank(player.playerCard[4]._rank) + player.playerCard[4]._suit
                  );
 
 
@@ -293,6 +303,32 @@ namespace pokerAPI
 
 
             return true;
+
+        }
+
+
+
+
+        public string testCardRank(int r) {
+            if (r == 11)
+            {
+                return "J";
+            }
+            else if (r == 12)
+            {
+                return "Q";
+            }
+            else if (r == 13)
+            {
+                return "K";
+            }
+            else if (r == 14)
+            {
+                return "A";
+            }
+            else {
+                return r.ToString();
+            }
 
         }
 
