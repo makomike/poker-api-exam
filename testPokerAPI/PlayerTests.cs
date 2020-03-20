@@ -42,8 +42,6 @@ namespace testPokerAPI
             
         }
 
-
-
         [TestMethod]
         public void PlayerCard_HandIsThreeOfAKind()
         {
@@ -74,7 +72,6 @@ namespace testPokerAPI
 
 
         }
-
 
         [TestMethod]
         public void PlayerCard_HandIsFullHouse()
@@ -152,5 +149,8 @@ namespace testPokerAPI
 
 
         }
+
+
+
     }
 }

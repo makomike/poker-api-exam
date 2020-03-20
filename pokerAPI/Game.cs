@@ -17,6 +17,9 @@ namespace pokerAPI
         string playerName;
 
         public Game() {
+            Console.WriteLine("Implemented hand validations are FLUSH, STRAIGHT, THREE OF A KIND, FOUR OF A KIND AND FULL HOUSE.\n");
+            Console.WriteLine("Picking a card format is rank and suit. \n\t Example: 2D\n\n");
+
             players = new List<Player>();
          
             Console.Write("Enter number of players: ");
